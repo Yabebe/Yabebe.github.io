@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    
     {% comment %} <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
     function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
@@ -58,7 +59,23 @@
 
 
 
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                <input type=hidden name="orgid" value="00D2w000005RHPy">
+                <input type=hidden name="retURL" value="http://yabe.bet/">
+                <label for="name">取引先責任者名</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+                <label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+                <label for="phone">電話</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+                <label for="subject">件名</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+                <label for="description">説明</label><textarea name="description"></textarea><br>
+                <input type="submit" name="submit">
+            </form>
+
+
+
+
     </div>
    
 </body>
 </html>
+
+
